@@ -1,0 +1,61 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: RunTest
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _N_2cwMWXEeaPfLEWPGlvGw
+Runtime-Version: 2.1.0.201606221726
+Save-Time: 12/21/16 4:31 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+// Copy .metadata folder to the workspace location.
+// This is needed when we run test using Runner cli as it always creates a new workspace folder
+// hence the config changes needed for AUT are not available. Hence copying .metadata copies the added AUT and configs 
+exec-process "cp""-R""/Users/ssekhri/RcpttTrialWorkspace/.metadata"[get-workspace-location]
+restart-aut
+wait-until-eclipse-is-ready
+
+// To open an existing rcptt project
+get-menu "File/Open Projects from File System..." | click
+set-dialog-result Folder "/Users/ssekhri/Documents/Studio/AutomatedTest/ClientSmokeTest"
+with [get-window "Import Projects from File System or Archive"] {
+    get-button "Directory..." | click
+    get-button Finish | click
+}
+
+// Run test and select AUT (which is studio)
+get-view "Test Explorer" | get-tree | select "ClientSmokeTest/Tests/Modules/CreateiOSModule" 
+    | get-menu "Run As/1 Test Cases" | click
+    
+with [get-window "Select an Application Under Test"] {
+    get-tree | select "com.appcelerator.titanium.rcp.product"
+    get-button OK | click
+}
+
+// The below if condition is added due to an issue where due to force copy of .metadata folder
+//  the window for "Select an Application Under Test" does not close even after AUT has launched.
+//   This happens only on first instance and after click of Ok button the test continues.
+//wait-until-eclipse-is-ready
+if [get-window | get-property "getShell().getText()" -raw | eq "Select an Application Under Test"]
+{
+   	with [get-window "Select an Application Under Test"] {
+	    get-tree | select "com.appcelerator.titanium.rcp.product"
+	    get-button OK | click
+	}
+}
+
+// Loop and wait till the test execution finishes
+loop [val count 0] {
+	if [get-view "Execution View" | get-button "Run Selected" | get-property "isEnabled()" -raw | eq [str false]] {
+	 	wait 1000
+	 	recur [$count | plus 1]
+		 	
+	}
+}
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
