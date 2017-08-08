@@ -1,13 +1,12 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _n1IhsLNrEeS08KPWWULTCw
 Element-Name: test1
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _luz5gMWkEeaPfLEWPGlvGw
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 12/21/16 4:37 PM
+Save-Time: 8/8/17 4:24 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -20,4 +19,14 @@ Entry-Name: .content
 //"echo \"appc\" > /users/ssekhri/testFile.sh"
 //"echo""\"appc\""">""/users/ssekhri/testFile.sh"
 //exec-process "bash" [Concat [get-workspace-location] "/TempScript/appcLogin.sh"] -ignoreExitCode -args [get-workspace-location]
+//exec-process -command "/Users/ssekhri/desktop/StudioTestRunner/TestParser.sh" | get stdout | show-alert
+//exec-process "bash" [Concat [get-workspace-location] "/TempScript/appcLogin.sh"] -ignoreExitCode -args [get-workspace-location]
+//show-alert "Test1"
+//exec-process "bash" [Concat [get-workspace-location] "/setupBash/setup.sh "] -args $APPC_CLI -args $TI_SDK -args $APPC_USER -args $APPC_USER_PWD -args $APPC_USER_ORGID -args [get-workspace-location] | get stdout | log
+//exec-process "pwd" | get stdout | log
+show-alert [get-param "$APPC_CLI"]
+show-alert [get-param "$TI_SDK"]
+show-alert [get-param "$APPC_USER" ]
+show-alert [get-param "$APPC_USER_PWD"]
+show-alert [get-param "$APPC_USER_ORG"]
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
