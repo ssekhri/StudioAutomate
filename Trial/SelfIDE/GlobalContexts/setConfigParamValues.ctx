@@ -6,13 +6,13 @@ Element-Type: context
 Element-Version: 2.0
 Id: _LzLCsHwWEee2TNn2nhypAg
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 8/8/17 4:20 PM
+Save-Time: 8/10/17 11:41 AM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
 Entry-Name: .ecl.context
 
-read-file [concat [get-workspace-location] "/Setupfile/StudioTestSetup.ini"] | split -sep "\n" | foreach [val item]{
+read-file [concat [get-workspace-location] "/../Setupfile/StudioTestSetup.ini"] | split -sep "\n" | foreach [val item]{
 	list [$item | split -sep "="] | get 0 | switch [case "APPC_CLI" {
 		set-param "$APPC_CLI" -value [list [$item | split -sep "="] | get 1]
 	}] [case "TI_SDK" {
