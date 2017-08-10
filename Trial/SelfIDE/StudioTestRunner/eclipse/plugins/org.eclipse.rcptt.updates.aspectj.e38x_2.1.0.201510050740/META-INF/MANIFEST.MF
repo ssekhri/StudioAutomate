@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.rcptt.updates.aspectj.e38x;singleton:
+ =true
+Archiver-Version: Plexus Archiver
+Built-By: genie.rcptt
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 2.1.0.201510050740
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_51
+Eclipse-BundleShape: dir
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e38x/pom.xml
+SHA-256-Digest: ns7Clg4MUm+pq+tbUylKqTq35NSQOcJiZ7bou4nK+OU=
+
+Name: about.html
+SHA-256-Digest: FuGDyVi4xTNiBkAA3sboERoZx2W7dqYdQrtt/AG1E7U=
+
+Name: plugin.xml
+SHA-256-Digest: eezsCVY8XPGy+YSyz5wTnazjP2N8lP9/jP0C4BXWWRk=
+
+Name: plugin.properties
+SHA-256-Digest: 1LLj8S4xGBJDLgN+IcO5RLCJsfe/9i0MVApJ7IDI1K4=
+
+Name: dependencies/content.jar
+SHA-256-Digest: AshRqVHfu3ZNgvVTZbE85a9TStFDRjlWBhcHkmQbChc=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.aspectj_1.0.300
+ .I20130319-1000.jar
+SHA-256-Digest: h4nuR3KQ7sbcT+ExObQd0RRYQJgxLS9F2EWbukL4a/0=
+
+Name: dependencies/artifacts.jar
+SHA-256-Digest: /dkRU3snakkTGcUawppsUqtDvSZLn3Lswsl4NDjckgk=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e38x/pom.properties
+SHA-256-Digest: GEdErsParIdt7WRvWOjmzESI+0Ujow0jxjMjRculWtI=
+
+Name: dependencies/plugins/org.aspectj.runtime_1.7.3.20130613144500-a.
+ jar
+SHA-256-Digest: 3FWajnYvrjgkVYhC622wGnIvYASas17hdY5YyxnVOvs=
+
+Name: dependencies/plugins/org.aspectj.weaver_1.7.3.20130613144500-a.j
+ ar
+SHA-256-Digest: mPSzMmjgp9aqc9A2UH9c6xH/YX2ns7fi4G/BoeVNZKA=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.hook_1.0.200.I2
+ 0130319-1000.jar
+SHA-256-Digest: lWlkKZ2bhS6T0Qp/ci9MXHGcHoqCJsaVZHjmfeI4uTI=
+

@@ -1,0 +1,62 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.rcptt.updates.aspectj.e3x;singleton:=
+ true
+Archiver-Version: Plexus Archiver
+Built-By: genie.rcptt
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 2.1.0.201510050740
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_51
+Eclipse-BundleShape: dir
+
+Name: about.properties
+SHA-256-Digest: 2QnH2HiXPhp8rgxyMUA/Fq2rHPjJC7rRX5S1aky7mdU=
+
+Name: about.html
+SHA-256-Digest: FuGDyVi4xTNiBkAA3sboERoZx2W7dqYdQrtt/AG1E7U=
+
+Name: plugin.xml
+SHA-256-Digest: qzxpvrQKjQVk9ZYeyaGqFJ54QN0+oRvPsyAMUQG98cA=
+
+Name: featureImage.png
+SHA-256-Digest: zBcmKHglxDQmyUrz1PuW6FvcTZa846Vvjggw9ZMl1ec=
+
+Name: dependencies/content.jar
+SHA-256-Digest: fwXYOZCKxPd2SqCdo7UZkSk9ErORQ/BjbAZKAdzKDTU=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e3x/pom.xml
+SHA-256-Digest: swPxfPDCj2JOG98nvd7+p5awPva0P5EP1QO/oQpiE/s=
+
+Name: dependencies/artifacts.jar
+SHA-256-Digest: exbFu59xZ2jthSPd7eZdvRtC5Rfsqp6HrQ78pFg6OXs=
+
+Name: dependencies/plugins/org.aspectj.weaver_1.7.0.20120703164200.jar
+SHA-256-Digest: g+LyJUfZr2KKEBwbfHQWEkYC2fhLtuOIa5aTCXOK5xQ=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.hook_1.0.200.I2
+ 0120427-0800.jar
+SHA-256-Digest: R6qPFRLY7kdb7GyRTdrrcRMejzEQB3st2h6Gz1H8iLw=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.aspectj_1.0.100
+ .I20120427-0800.jar
+SHA-256-Digest: feFdfnDWOiykD/g3ngmbLA8SG08rzqmUforxUM8jXko=
+
+Name: about.ini
+SHA-256-Digest: 3ocoX3Ny70DvzH/KTNMl+fGf13e8kmGkunh3LfuQFZo=
+
+Name: plugin.properties
+SHA-256-Digest: Fqf9Id5WB/LrYh4OULn/MctvU56CBlmg2A97ciX0pKQ=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e3x/pom.properties
+SHA-256-Digest: RkXoFmsT6GQ46ZFArgEGZxiu/RBb/QJZU8zyXLekoHk=
+
+Name: dependencies/plugins/org.aspectj.runtime_1.7.0.20120703164200.ja
+ r
+SHA-256-Digest: XWPEXDJxGJZ3NqeMVDN+jAl40XoZ6wCS41ZAh24js54=
+
