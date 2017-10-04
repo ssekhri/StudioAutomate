@@ -10,7 +10,7 @@ read_ini StudioTestSetup.ini
 ####
 #Call the setup.sh which would setup the test environment based on values(version and other details) fetched from StudioTestSetup.ini
 ####
-bash setup.sh ${INI__APPC_CLI} ${INI__TI_SDK} ${INI__APPC_USER} ${INI__APPC_USER_PWD} ${INI__APPC_USER_ORG}
+#bash setup.sh ${INI__APPC_CLI} ${INI__TI_SDK} ${INI__APPC_USER} ${INI__APPC_USER_PWD} ${INI__APPC_USER_ORG}
 
 if [ $? == 0 ]
 then
@@ -18,12 +18,14 @@ then
 
      #sleep 5
      TestRunnerDir=/users/$(whoami)/RCPTTTestRunner
+     rm -rf $TestRunnerDir
      mkdir -p $TestRunnerDir
      chmod ugo+rwx $TestRunnerDir
      # Set properties below
      runnerPath=./eclipse
      autPath=/Users/ssekhri/Documents/RCPTT_Workspace/AppceleratorStudio
      project=../../StudioSmokeTests
+     #project=/Users/ssekhri/git/StudioAutomate/StudioSmokeTests/
 
      # properties below configure all intermediate and result files
      # to be put in "results" folder next to a project folder. If
@@ -51,7 +53,7 @@ then
           -htmlReport $htmlReport \
           -junitReport $junitReport \
           -import $project \
-          -tests test2.test \
+          #-tests test2.test \
           #-injection:site http://download.eclipse.org/releases/luna ;org.eclipse.jdt.feature.group; \
           
 
