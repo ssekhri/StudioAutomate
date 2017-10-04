@@ -1,0 +1,506 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.rcptt.updates.runtime.e4x;singleton:=
+ true
+Archiver-Version: Plexus Archiver
+Built-By: genie.rcptt
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 2.1.0.201606221733
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_51
+Eclipse-BundleShape: dir
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.swt.aspects_2.1.0.20160405082
+ 1.jar
+SHA-256-Digest: oTYRLM1rD1tJM+vG0pzow1qaG4IQwsFzS8Y6YAdSuxc=
+
+Name: plugin.xml
+SHA-256-Digest: pB6mkjkmEq/HWV17LynDGOYvVu8T2to/Ea08fkPU8Q4=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.canvas_2.1.0.201510
+ 050740.jar
+SHA-256-Digest: XKYEohXHT83lRtZL+UMRNoAmHua2FdGiCkWU2WpS5xQ=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.runti
+ me.e4x/pom.xml
+SHA-256-Digest: fJu7UmM7d9Y4Mq38gVfJHVs0aaw6MEqRNTSnXud/et4=
+
+Name: q7/plugins/org.eclipse.rcptt.core.ecl.core_2.1.0.201512140942.ja
+ r
+SHA-256-Digest: x2T7i+ZEGrTsyoa0CfKX2FqJFShlKXXec+iSY2lG2tI=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.script_2.1.0.201510050740.jar
+SHA-256-Digest: fAaRkwwWSaHZqmeWN1hCFVE4D3a+5kv8Qi2xDEhLsqY=
+
+Name: q7/features/org.eclipse.rcptt.ecl.platform.ui_2.1.0.201510050740
+ .jar
+SHA-256-Digest: eyO9lX/p76nPM5g4rqp/2J/JEH062Cb4g7JGQeRQEWw=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.preferences_2.1.0.201510050740.
+ jar
+SHA-256-Digest: jbkwewAlNtuLzeeGDErlJdXe2tOZ3ggi/x0G+7RFs7c=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.workbench.impl_2.1.0.2015112208
+ 32.jar
+SHA-256-Digest: DWxnGJ1adLtOACdlYZ6XcaJI2zSxHUGqcrgs3pKGdzM=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.core_2.1.0.201510050740.jar
+SHA-256-Digest: X1AkDPgBF6Xk+GWSgeTAPJ4Z58tNkfsOcBocL626B+0=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.properties.view_2.1.0.2016052
+ 11632.jar
+SHA-256-Digest: fCzQY0YjZ5n6pU9BsY974IrSFa8jQD7AcKAc1UAa5lk=
+
+Name: q7/plugins/org.eclipse.rcptt.reporting_2.1.0.201512011236.jar
+SHA-256-Digest: wJinifqdQl/lj/3NbuM0znNTtsKPaPTGcHiIlf9EEc8=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.platform_2.1.0.201510050740.jar
+SHA-256-Digest: cStjvq1IAbaY4DBTPUchVQciuJfnNkHGrATK0E3IRlw=
+
+Name: q7/plugins/org.eclipse.rcptt.expandbar.runtime_2.1.0.20160521163
+ 2.jar
+SHA-256-Digest: fKybImKldJ1j4XCMERUPdz+C7ziDq/lcgUqMh4e7gBQ=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.core.ecl_2.1.0.2015
+ 10050740.jar
+SHA-256-Digest: sHL2PIjgAYXq4VN+jV7/htCm5JcqfR227OPZ5pgKhBQ=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.fragment_2.1.0.20151005
+ 0740.jar
+SHA-256-Digest: eLbmXZk8dQoK8JKBPzxCr2J/lIQGyOTg9uFIKOaCUiU=
+
+Name: q7/content.jar
+SHA-256-Digest: yvd2hnzJaUTykJfWxhfFn8XT17boaN9ldTvSVU3wL20=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.draw2d_2.1.
+ 0.201510050740.jar
+SHA-256-Digest: L1nPj8NLtjNv6ml68f/M4oQBxfYCFZSnLwcKXCAMztk=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.runti
+ me.e4x/pom.properties
+SHA-256-Digest: YxVcKtGXLdqsarHtz49qG3m9Ny8WNnha3++6dg+EHc8=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.platform.ui_2.1.0.201510050740.
+ jar
+SHA-256-Digest: aB22m//haG+tbve7oyEudfVGJ7LNShqjrSHSgDlIVKk=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.core_2.1.0.20160427
+ 0901.jar
+SHA-256-Digest: 4yewgqh8/OYQR37FobZqa33TomlxgpxwItFfvGFMXB4=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.gmf.aspects_2.1.0.20151005074
+ 0.jar
+SHA-256-Digest: j9pUYajkaaGYpJy96WiJMp8gQtKGQccAg4zlSlf7W84=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.data_2.1.0.201510050740.jar
+SHA-256-Digest: kBalfkady9FmyRtLmId4oVnb+GAHxI8Tx4375mnHPlg=
+
+Name: q7/features/org.eclipse.rcptt.tesla.ecl.runtime_2.1.0.2016040513
+ 43.jar
+SHA-256-Digest: yWtSLPTYRA5/QbSTKIvTnoQsFpB469YZLLaD8wIf8LY=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.text.reconciler.aspects
+ _2.1.0.201510050740.jar
+SHA-256-Digest: HUD8qocfYSQW0EmGr9uF6KnuFz1S6RjinUziyU4Ezvg=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.draw2d_2.1.0.201510
+ 050740.jar
+SHA-256-Digest: o7cbhq1qs8sS99m9kzJqE3vYh2OoSR7RD4t0mEHyZdM=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.ecl_2.1.0.201510050740.jar
+SHA-256-Digest: SChxaBRkkyco98o7tlnzNCjcXrbazdABrFq0shVb5fM=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.tree.impl_2.1.0.20151
+ 0200613.jar
+SHA-256-Digest: EeHMEXQv3Ayt3YEfF6XvYrgtIYOGYtuA4I5M5A6Q68g=
+
+Name: q7/plugins/org.eclipse.rcptt.logging_2.1.0.201510050740.jar
+SHA-256-Digest: omZilh5I6kZMyZdZ62rVjN3H9nPtU1sodhDj9ZAQC1Q=
+
+Name: q7/plugins/org.eclipse.rcptt.util.swt.win64_2.1.0.201506300557.j
+ ar
+SHA-256-Digest: pTlcp0u+Svh+k969kXQRBy2ihPkgIdlM3PPFO18S5Wg=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.interop_2.1.0.201604210752.jar
+SHA-256-Digest: QQLQbAtxH1tSTrfO74aNevSy0JVzCVNEaYpO8TgQ/0Q=
+
+Name: q7/plugins/org.eclipse.rcptt.expandbar_2.1.0.201510050740.jar
+SHA-256-Digest: ilT41ktpJkNUBj/surK/Ag+N8d4noEsA8Ai1W4kHeLI=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.swt.fragment_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: 09HpG37LdWWVSphl0KVI8+xNztDMGqO9AbmO6jXJnUc=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.workbench.texteditor_2.1.0.20
+ 1605211632.jar
+SHA-256-Digest: EipG37w6lAwWdM4wCi25f9wTGsbmNpeozKVL7ewjt1Q=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jobs.aspects_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: PKU7ZESvewacfbvfKH53rH9TNpRUYzwoe5fzGs8dbos=
+
+Name: q7/features/org.eclipse.rcptt.runtime_2.1.0.201605211632.jar
+SHA-256-Digest: VeuUTUrzTT8vA+06XbO1MlvH5sGt2FRhkHB9+OPMCk0=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.gef_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: eEGiT9k0VfwKJ7pxOiWTiM9P975tJ/8JnujUyOrXwMY=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.swt_2.1.0.201605231526.jar
+SHA-256-Digest: LuHfmIADp8ynCx2Wr3pGkzINjC9QGgXXxtbK8JQrKGY=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.preferences.impl_2.1.0.20151005
+ 0740.jar
+SHA-256-Digest: CsLyfak0JJb0fjRcXMo0WIXyaF+WGJp0xXWPRtWA2yU=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.databinding.aspects_2.1
+ .0.201510050740.jar
+SHA-256-Digest: mqbjICAtmSCHVacZPk1JE2KRqHu1MU/TEkG1cKFowhQ=
+
+Name: q7/features/org.eclipse.rcptt.tesla_2.1.0.201605311902.jar
+SHA-256-Digest: aI8Fk8pwgGe2Wbatzvn6wpX5TWA8Hp4+EcJs0S7BJOg=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.swt_2.1.0.2
+ 01510050740.jar
+SHA-256-Digest: fEWEcfknoxdi1tMe5s/M1ozeiMAIeyQt1flMJr/xA88=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.text.impl_2.1.0.20151
+ 0050740.jar
+SHA-256-Digest: 2bgwrYN8qcJM3BIhqRlD+USjeYRlDMRsDPGZ5gQGjQQ=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.gef_2.1.0.2
+ 01510050740.jar
+SHA-256-Digest: ljE7hurnHC4SGjU7mCf5h3usUd9RboGm143VdRAQ0PU=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jdt_2.1.0.201605211632.jar
+SHA-256-Digest: vRi6Q3/Dr6TJeC9X+gHjIKLPM14UDhXEyeURGZCSEpE=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jdt.aspects_2.1.0.20151005074
+ 0.jar
+SHA-256-Digest: 0BZ1NYtITRjHRViWM0yupkJmPEo7/2Oo6ja6mNMSJbE=
+
+Name: q7/plugins/org.eclipse.rcptt.watson.aspects.jobs_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: MdE5tdMz50R6ZZYGxnE664JSjhnrYuPfsqxCVE1njmA=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.aspects_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: rrjG0cL1mWxucqGXmAdjBWupmQ32giP7/rV2GTTlSNs=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.core.am_2.1.0.201510050740.ja
+ r
+SHA-256-Digest: 3uCvJokitxpLZv/ilNcCB4kDAWWCM2Z5fML2MmIdJhA=
+
+Name: q7/features/org.eclipse.rcptt.ecl.core_2.1.0.201604210752.jar
+SHA-256-Digest: nq0amFzH9U4lTDsqdF0IeG4TpaVLCUQvUf4b5efn8/8=
+
+Name: q7/plugins/org.eclipse.rcptt.runtime.ui_2.1.0.201605110759.jar
+SHA-256-Digest: Ykc0L/xc3/VK7p4js6VoDtn7mLL/Nu31oNTrkNzYcuU=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.ecl.impl_2.1.0.201604051343.j
+ ar
+SHA-256-Digest: 9PX4G/YFwOiuECBbSngUeN0VfwaBNbU38U/RjLSVfY0=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.preferences.aspects_2.1.0.20151
+ 0050740.jar
+SHA-256-Digest: eWxRWi7P76hYzJ2ACB+lAJ6NfkEwoJXX6EEFhmGBG8I=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.parameters.impl_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: 85bbmHRBiGH2eYpgj5XRvTbdS+iQkU5zs0daDUUB5j4=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.workbench.aspects.e4x_2.1.0.2
+ 01510050740.jar
+SHA-256-Digest: 8z8nS5n11k3m+syl2RCZWAt6JxCwEL7AWIMTeQ9RcR4=
+
+Name: q7/plugins/org.eclipse.rcptt.util_2.1.0.201510050740.jar
+SHA-256-Digest: MowmXX50v+52IgBrF9epn+d/mKlgoE82pMONqOUL6Go=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.text_2.1.0.201605211632
+ .jar
+SHA-256-Digest: a8DUriVVieAdmoOlMCKsHZL5uC2d1C6tU83RaujL4VY=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.time.impl_2.1.0.20151
+ 0050740.jar
+SHA-256-Digest: J2hxn+0/8K04phl7iZi3zKGkdQzAVe2hdDbbX41XsjA=
+
+Name: q7/plugins/org.eclipse.rcptt.util.swt.win32_2.1.0.201506300557.j
+ ar
+SHA-256-Digest: ujwTcv5Y4MWcVIw8NLEQYkUAm1vja9yi6txkKbpKFwE=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.parser_2.1.0.201510050740.jar
+SHA-256-Digest: eLOR+Vtbe2xjr0jUtb715s/Um2k7hTpjc+EygorVbak=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.time_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: bdFTLTqtsAUEPQxV1X/QEOye8WaGW/mwJRu8bzOVjas=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.gef_2.1.0.201605211632.jar
+SHA-256-Digest: U8DjB9Wjp/UbIo+9EVQX+goaj4vxs31qQxQrxbOwAEU=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.forms_2.1.0
+ .201510050740.jar
+SHA-256-Digest: EkU9H359XN0RE/R5MC9DdxVXcbMKdjTO9OKI+GVkwcQ=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.perf_2.1.0.201510050740.jar
+SHA-256-Digest: 1zn0tFckjbA9rZP4fGAkkKKq2/tnxfCu9a7mHuQ2osU=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.workbench.aspect_2.1.0.20151005
+ 0740.jar
+SHA-256-Digest: ds0p5BagT7sOJsdpiK7TfsPiBO+zZKvs+WOh7RQaNko=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.filesystem_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: Ecp8HN+sFsBLrb8MvA96DJ8INC9VkQJgaLU4RnD8aIE=
+
+Name: q7/content.xml.xz
+SHA-256-Digest: rApFF9tIPFZa6ltfhmPKZeMkZvz/1LL2Rpvh7zoDaK0=
+
+Name: q7/plugins/org.eclipse.rcptt.watson.jface_2.1.0.201510050740.jar
+SHA-256-Digest: rwm4BsVHQ+MJuuK8/DQd3W2Kmu/ycZvCV1CwGl+Dhes=
+
+Name: q7/features/org.eclipse.rcptt.watson.runtime_2.1.0.201510050744.
+ jar
+SHA-256-Digest: YHk3uBCH5Ub0efhVQ2Fdt5tEy+/dmI7vWuNRuTJV7B8=
+
+Name: q7/plugins/org.antlr.runtime_3.2.0.v201101311130.jar
+SHA-256-Digest: oGqEpPCjUAk2XeYLsc7InKcBcLs6PQq4j6Dnl58akgM=
+
+Name: q7/features/org.eclipse.rcptt.ecl.platform_2.1.0.201510050744.ja
+ r
+SHA-256-Digest: ZclGhzuTM7N+aU68mqIFQRgu2e7eyB+/5kDKIyK+tqQ=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.jface.text_
+ 2.1.0.201510050740.jar
+SHA-256-Digest: W5t7gD3uHUU6P5jCh9F1x/JsxbVeIVTy3fsrYRvQtGk=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.tree_2.1.0.2015102006
+ 13.jar
+SHA-256-Digest: TLe1h2MNrKLPV2rJxua2jl07mQBs9R0OCjiKUMUEP5Y=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.resources.impl_2.1.0.2016042613
+ 52.jar
+SHA-256-Digest: YMWIweCj3FxwZZ2Wjccwqa9BCqQuaDmp11HHJndDIUw=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.variables_2.1.0.201510050740.
+ jar
+SHA-256-Digest: i4mxD9xRn4O4wVwJvJWRhM+xSZBgMU2NOZ4LmwinIeg=
+
+Name: q7/plugins/org.eclipse.rcptt.util.swt_2.1.0.201510050740.jar
+SHA-256-Digest: Nih9M75nRv+bAkbR1WNpZsTsxdPhiNF/14vtXDO6ddU=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.operations_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: PFCYEDjP2oxhcQ643yrC6ZiTvL5OReGdDwKtVJrN7gk=
+
+Name: q7/p2.index
+SHA-256-Digest: VWucvsaLrcqBPM0Zs8XM0T37Lrwe1SYy8fgG3PYEPIQ=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.core_2.1.0.201605311902.jar
+SHA-256-Digest: bglPgfsVkIs345YlbN7QPJdVU39ai0W3AFLQrwH1BNk=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.text.aspects_2.1.0.2015
+ 10050740.jar
+SHA-256-Digest: v40963OOyDZfZBMYh0nHn5NFRYJGDKOpSrI7fCHmLHk=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.parameters_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: cBkbamt+Xv/ylR5JhSdg9ZUNhO1ZXY7e2HXsV2Ekhf4=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.server.tcp_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: ZhwiHmIhD+xBUEtuuOdfaKuXSIExyzCrkC2VrpABYQ8=
+
+Name: plugin.properties
+SHA-256-Digest: 0qliri2h18NKLHASfSTa9T2OA4zfmG7G8b8uVnepB08=
+
+Name: q7/artifacts.jar
+SHA-256-Digest: CNFi7zqxcK+WePMfpRdGCsaV1K2aJtA2f4xE5qZ4Oio=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.group_2.1.0.201510050740.jar
+SHA-256-Digest: 5IXS9yAXjhQYoici3OVrQUBKm6c0ymv0mhwD4bRi3nk=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.workbench.t
+ exteditor_2.1.0.201510050740.jar
+SHA-256-Digest: dG4XM/jhZzfCYZnn5Ryb5CExn6vI0KJmOUlw4+71B/0=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.script.impl_2.1.0.201511301507.
+ jar
+SHA-256-Digest: FtuKsT6yZiyKAhI/qBG2tw/PF2y3jk7kFmgkY93bIrE=
+
+Name: q7/plugins/org.eclipse.rcptt.watson.jobs_2.1.0.201510050740.jar
+SHA-256-Digest: +mjkAAC25bRul0GmqE4zSMP5x29d/uJXW9xEopjWtRk=
+
+Name: q7/plugins/org.eclipse.rcptt.core.ecl.debug_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: Kzm4W9GknfZ9+OYCiZEnORmBFwdNEIBKFy+9ejtSIjg=
+
+Name: q7/artifacts.xml.xz
+SHA-256-Digest: xRil6fjHYm7XAySlRGh+nUiQOkrnZaEMlOgF2QPIX1E=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.workbench_2
+ .1.0.201510050740.jar
+SHA-256-Digest: Xy7qTaAOCNzEHdpp7ZgL6uxrYankqFnJJ4s1Gc44FqI=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.databinding_2.1.0.20160
+ 5211632.jar
+SHA-256-Digest: CbLOmmrjD6+y4QpH3ItNzfgOhAa8xhZ/cU7epfouCnY=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.jface.databinding.observable.
+ aspects_2.1.0.201510050740.jar
+SHA-256-Digest: /kMm4JYMLLXqhU4Zr4UT//uSc73w50+cIfM19H/7gU0=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.workbench.texteditor.aspects_
+ 2.1.0.201510050740.jar
+SHA-256-Digest: hSmObXxvkXn2ZKQtSuMkBfCuhr8aQ7jAorxpdu1tIls=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.log_2.1.0.20151201123
+ 6.jar
+SHA-256-Digest: N4tzM/XyIZjqC/BedRSxy0CSomZ87vftdbv1UBTpChM=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.debug.impl_2.1.0.201605101831.j
+ ar
+SHA-256-Digest: C4i8n4ygj5u924AxaW3Ko35MROnG8j5NqyJBQFAykwA=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.jface.text_2.1.0.20
+ 1510050740.jar
+SHA-256-Digest: +kc4Eig4cRz94zi7QIqDpudm6AXjDfJY/GVyB6U/cX8=
+
+Name: q7/plugins/org.eclipse.rcptt.util.resources_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: fVNj6xEgQvTrWHQ0B4T+yA5IKlvqb51jsDTXi1+xUaU=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.group.impl_2.1.0.201511301507.j
+ ar
+SHA-256-Digest: v8quFYyroAgOqXsiVtgjOq1T5wfflHdadW+Wtp0n6XY=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.resources_2.1.0.201510050740.ja
+ r
+SHA-256-Digest: SFHSRmdtl7GO+DpJVEMAy6cPs6qmNSq7DtebwNPj0Bw=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.gmf_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: VMad8WIblAzs2dOG4O391rZ0bhiDLdXlUy8b3Y0imXo=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications_2.1.0.201510050740.ja
+ r
+SHA-256-Digest: PSNzG6v1xoixzpYDAjoYayVrkOCynZEtaCyLx8zBC1Y=
+
+Name: q7/plugins/org.eclipse.rcptt.core.launching_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: Fc3fiec3ssNRMp0uQTsaCVcVX+pd8WPz07TOgIGw0FE=
+
+Name: q7/plugins/org.eclipse.rcptt.forms.impl_2.1.0.201605211632.jar
+SHA-256-Digest: a3u0pK2gOnQsyjR6htPE587g7ETMnWiPOEEoKVqPjlQ=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.log.impl_2.1.0.201512
+ 011236.jar
+SHA-256-Digest: tQGBtakY0hmm3Njsjo6bxswHvyrFxN5QNLWEm54GkbE=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.workbench_2.1.0.201510050740.ja
+ r
+SHA-256-Digest: Xnrsbk9jqgkXek9GV6QMWoL+mfDO3kj89L9QK0u8xos=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.ui.ide_2.1.0.201605211632.jar
+SHA-256-Digest: IrOqmcIU47Swpk08llzUipgMPuubS5eGWMVFlnf3nTM=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.ui.ide.aspects_2.1.0.20151005
+ 0740.jar
+SHA-256-Digest: a+sIvFi635cO+VGfoSAS0Wa/7QWe99ruUsvjSQ7JXvE=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.gmf_2.1.0.2
+ 01510050740.jar
+SHA-256-Digest: FGM5icFxKFMpKbTLRPNObI/5GUygzkHOZCe1tKtdW4k=
+
+Name: q7/plugins/org.eclipse.rcptt.watson.core_2.1.0.201512011236.jar
+SHA-256-Digest: Nx2IaGv3spNMz3kwuKY0BDzObiED/9DH/tfBXA2N6yU=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.doc_2.1.0.201510050740.jar
+SHA-256-Digest: ZTxPtE1f/Nja7wAcBFbswhguI8fj1JNmy5BY6fVY50A=
+
+Name: q7/plugins/org.eclipse.rcptt.core_2.1.0.201604261352.jar
+SHA-256-Digest: j9eA/2Z37DvJ4QUiSPzpB6mDgOnXlN4ddWdk7e03/gw=
+
+Name: q7/plugins/org.eclipse.rcptt.verifications.text_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: M4QnOw8eAS/C8gp4BVG+HHna00Eb0+zV0YUpKbjg8Mg=
+
+Name: q7/features/org.eclipse.rcptt.watson_2.1.0.201512011236.jar
+SHA-256-Digest: xezBovKFTqv1TPBPwblvSzGpN32V2lTmiJpineRRffk=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.dispatch_2.1.0.201510050740.jar
+SHA-256-Digest: KT+mY5pZUAzSi4YGd8DbtXskyJzaNIgbJBORItTlFIA=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.debug_2.1.0.201510050740.jar
+SHA-256-Digest: /V6m1PyRlv81oHDTOZ/zRTwHO2IXK3vznljcT63DobY=
+
+Name: q7/plugins/org.eclipse.rcptt.watson.aspects.swt_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: KuWPRxB/sDnGIpqtl8JePMVJiaFY2ciEcxdaJUTUPxc=
+
+Name: q7/features/org.eclipse.rcptt.tesla.runtime_2.1.0.201605231526.j
+ ar
+SHA-256-Digest: Pqrm8Sqpi7AqTF2vccKsmT8suP8k1KghhqOZRihAskc=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.core.context_2.1.0.2015100507
+ 40.jar
+SHA-256-Digest: 2FwMHqUAq50/86gBlkJmSzzW2kaq/q+C0WMrX8U0FGo=
+
+Name: q7/features/org.eclipse.rcptt.tesla.ecl_2.1.0.201510050744.jar
+SHA-256-Digest: pnWQonKIvsXTkoILGzsOt2fctG5+NXG3f4ZnNF8TbbE=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.canvas_2.1.0.201605211632.jar
+SHA-256-Digest: kShGf4ODQHw0lrmmEhXLaVeo+QTZ2F93VCzyxNkaMss=
+
+Name: q7/features/org.eclipse.rcptt.ecl.server_2.1.0.201510050744.jar
+SHA-256-Digest: VbQOrKmahg8xoI+TOQ91ZO5gai9Weo1wwR2Cps4pdyw=
+
+Name: about.html
+SHA-256-Digest: FuGDyVi4xTNiBkAA3sboERoZx2W7dqYdQrtt/AG1E7U=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.gmf_2.1.0.201605211632.jar
+SHA-256-Digest: FbUOCIcNnQQzSlKfVcPK4DSAxrWyE5ev9XNQ6DWcjKw=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.debug.runtime_2.1.0.20151005074
+ 0.jar
+SHA-256-Digest: U7rPOYYHXUAG33coKQ+YKOEPV0BPCCC2pZJQzNclDGs=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.swt.e4x_2.1.0.201511220832.ja
+ r
+SHA-256-Digest: HmIQylobcOqA/CdqMw3jB0f/msFlHu2OBbQbonxJqTo=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.filesystem_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: e7BwcSJATPYHwb2ikJa6dJJqxnrr/+XX1Fa6+rBLz1o=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.gef.aspects_2.1.0.20151005074
+ 0.jar
+SHA-256-Digest: 5pTK114vVsdIZpxDZiZcVLIxgjQj4E8Vc4ppSYAs8VY=
+
+Name: q7/plugins/org.eclipse.rcptt.ctx.filesystem.impl_2.1.0.201510050
+ 740.jar
+SHA-256-Digest: wiPvHelTjqcPQvcdnHGeXNKIO99a9n9IMt8aySKC68k=
+
+Name: q7/plugins/org.eclipse.rcptt.core.scenario_2.1.0.201510050740.ja
+ r
+SHA-256-Digest: svNavFnFFxDp7Ap/YQuAa0avaEKCyZnzpaPpykyU0zE=
+
+Name: q7/plugins/org.eclipse.rcptt.ecl.client.tcp_2.1.0.201510050740.j
+ ar
+SHA-256-Digest: 92TxWw2H47aLv0BOuovwBOnB29eJ17tLY+aPxKJIIG0=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.aspects.jface_2.1.0
+ .201510050740.jar
+SHA-256-Digest: cnsaLt37vObokJMzX1a9enxL2WvRkiLudg2SABab1C4=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.workbench.textedito
+ r_2.1.0.201510050740.jar
+SHA-256-Digest: 7OJw7m/nyr6fZ0DxbEkL2gyQAGKQ/peNUTVAaIeIe3A=
+
+Name: q7/plugins/org.eclipse.rcptt.tesla.recording.swt_2.1.0.201605101
+ 831.jar
+SHA-256-Digest: I8aJK3cCH2KevcuzJ2Lt+EtwLCPB2N69pHqepBj9N6Q=
+

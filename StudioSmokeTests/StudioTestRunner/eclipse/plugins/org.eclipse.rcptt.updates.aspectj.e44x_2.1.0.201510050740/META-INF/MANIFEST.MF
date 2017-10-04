@@ -1,0 +1,62 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.rcptt.updates.aspectj.e44x;singleton:
+ =true
+Archiver-Version: Plexus Archiver
+Built-By: genie.rcptt
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 2.1.0.201510050740
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_51
+Eclipse-BundleShape: dir
+
+Name: about.properties
+SHA-256-Digest: crc2uGm30SuIM/ro557BA/W1xsJm3LAyCtpCNCehkW0=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.hook_1.1.100.we
+ aving-hook-20140821.jar
+SHA-256-Digest: 7V3xTzCZKeFLPC7OMd4Am/qzetMbEKKlN7lFjHcv6/E=
+
+Name: about.html
+SHA-256-Digest: FuGDyVi4xTNiBkAA3sboERoZx2W7dqYdQrtt/AG1E7U=
+
+Name: plugin.xml
+SHA-256-Digest: Gz/pIWD5a5kyqLe22C/Yq+1R8XdL/XMiiu3xptqlB1s=
+
+Name: featureImage.png
+SHA-256-Digest: zBcmKHglxDQmyUrz1PuW6FvcTZa846Vvjggw9ZMl1ec=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e44x/pom.xml
+SHA-256-Digest: UJL703tx0z2XNKp9mPgRrHsRroQWESkRFaRXtMXnF0c=
+
+Name: dependencies/content.jar
+SHA-256-Digest: 5NTPXS4CNXA1DXnnh0O/FWr/ivb2vXck/oiZcsO85jM=
+
+Name: dependencies/artifacts.jar
+SHA-256-Digest: uw1Bw/iHz+Hq9gQtVA4vPka0ZQWX3z9MlM3jldg+dMg=
+
+Name: dependencies/plugins/org.aspectj.weaver_1.8.6.20150608154244.jar
+SHA-256-Digest: D3VZO7uG6vY+zxSqJl27aua+8yEWr2zKzFM4WU4eELs=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.aspectj_1.0.400
+ .weaving-hook-20140821.jar
+SHA-256-Digest: 4yVjfo4scXoKz07Ke60FE83Ixp022ITG0pHF2i8mJ3I=
+
+Name: about.ini
+SHA-256-Digest: 3ocoX3Ny70DvzH/KTNMl+fGf13e8kmGkunh3LfuQFZo=
+
+Name: plugin.properties
+SHA-256-Digest: NrULTNG2URgYxpF4Jz7nAKhMcYHYk2MPNS2+Lrpu1xI=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e44x/pom.properties
+SHA-256-Digest: cMXhmrTNomKjiAxzbV+LX3BYm73QeiFyon8lTatUe9I=
+
+Name: dependencies/plugins/org.aspectj.runtime_1.8.6.20150608154244.ja
+ r
+SHA-256-Digest: RjV6ruQuB9NHDG55k+w+dJIKTN0b0luCfAsHGBlGSro=
+

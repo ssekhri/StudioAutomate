@@ -9,7 +9,7 @@
 read_ini StudioTestSetup.ini
 
 ####
-#Call the setup.sh which would setup the test environment based on values(version and other details) fecthed from StudioTestSetup.ini
+#Call the setup.sh which would setup the test environment based on values(version and other details) fetched from StudioTestSetup.ini
 ####
 bash setup.sh ${INI__APPC_CLI} ${INI__TI_SDK} ${INI__APPC_USER} ${INI__APPC_USER_PWD} ${INI__APPC_USER_ORG}
 

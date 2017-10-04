@@ -1,0 +1,29 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: setConfigParamValues
+Element-Type: context
+Element-Version: 2.0
+Id: _BTPb4KjTEeeBiecpKqw4nA
+Runtime-Version: 2.1.0.201606221726
+Save-Time: 10/4/17 2:39 PM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+read-file [concat [get-workspace-location] "/../Setupfile/StudioTestSetup.ini"] | split -sep "\n" | foreach [val item]{
+	list [$item | split -sep "="] | get 0 | switch [case "APPC_CLI" {
+		set-param "$APPC_CLI" -value [list [$item | split -sep "="] | get 1]
+	}] [case "TI_SDK" {
+		set-param "$TI_SDK" -value [list [$item | split -sep "="] | get 1]
+	}] [case "APPC_USER" {
+		set-param "$APPC_USER" -value [list [$item | split -sep "="] | get 1]
+	}] [case "APPC_USER_PWD" {
+		set-param "$APPC_USER_PWD" -value [list [$item | split -sep "="] | get 1]
+	}] [case "APPC_USER_ORG" {
+		set-param "$APPC_USER_ORG" -value [list [$item | split -sep "="] | get 1]
+	}] 
+}
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

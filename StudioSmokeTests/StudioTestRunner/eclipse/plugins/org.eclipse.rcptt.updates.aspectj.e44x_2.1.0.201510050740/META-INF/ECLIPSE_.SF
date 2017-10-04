@@ -1,0 +1,53 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: m9Mi+unJB4jKyWO+e800zmsyuqLyU
+ sN88q1j+i7jX2E=
+SHA-256-Digest-Manifest: oSyk8tasXazErsEF5fhTF07yuaJ520+XxSYMcboJH+Q=
+Created-By: 1.8.0_51 (Oracle Corporation)
+
+Name: about.properties
+SHA-256-Digest: F2tRiSyxbrNCgnN94K0UP1r0yqA/W+S8J1V4jOiRLds=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.hook_1.1.100.we
+ aving-hook-20140821.jar
+SHA-256-Digest: ImTfBBb7jF/srbm1aqg6de0qxSHz3ZqEAUa4kz/JD3k=
+
+Name: about.html
+SHA-256-Digest: 2XEsjpHP+S7nSuQzG4L2BG8fRHPwJbH4OW6uei4OzB8=
+
+Name: plugin.xml
+SHA-256-Digest: jsUuk5qQkI8o7xS9QWWwQSTRZBlIX8ukDmD7vnhVTgY=
+
+Name: featureImage.png
+SHA-256-Digest: IBiteyGz65hvd36QS902Dpnp8d/rXvVipshjhGv2Nug=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e44x/pom.xml
+SHA-256-Digest: lSpCUcNfb7gTetS3mXW8jaPMMB+A94l/9O7GWmP61ME=
+
+Name: dependencies/content.jar
+SHA-256-Digest: Sjwy96EwOeO4Xlty+anjYGoap52qU6YahwD6ucBYlg0=
+
+Name: dependencies/artifacts.jar
+SHA-256-Digest: QwI1nGNW6vH/jYyypqh26+PSNpWiuaaMhHFrp5+ez0E=
+
+Name: dependencies/plugins/org.aspectj.weaver_1.8.6.20150608154244.jar
+SHA-256-Digest: WnfIyxetEVZ1/IYxboNHxF9Iw7zF+qNpvlufMQZFQVo=
+
+Name: dependencies/plugins/org.eclipse.equinox.weaving.aspectj_1.0.400
+ .weaving-hook-20140821.jar
+SHA-256-Digest: CaB4xYOaG/b8nQz0O6BANneYezUgxMJeZYCZ5mRk76A=
+
+Name: about.ini
+SHA-256-Digest: XxtU+0U2nLBiUSJV4gV7bABGQrt8uGmhXomYgDg5X8k=
+
+Name: plugin.properties
+SHA-256-Digest: 8KmpDyiHSD58aJSWDNPyJr+CTxb6cimRMhTbrA0FylA=
+
+Name: META-INF/maven/org.eclipse.rcptt/org.eclipse.rcptt.updates.aspec
+ tj.e44x/pom.properties
+SHA-256-Digest: pSB6fpSPBtIZy/AwnwsMjeOmrJMZD9x+E1UID/l5AYI=
+
+Name: dependencies/plugins/org.aspectj.runtime_1.8.6.20150608154244.ja
+ r
+SHA-256-Digest: yX/bIzNNQB5N2A2Ts/0jjLsAokIg3M+8t1OB33R2R84=
+

@@ -1,0 +1,5 @@
+#Eclipse Product File
+#Wed Jun 22 13:48:31 EDT 2016
+version=2.1.0
+name=RCPTT Runner
+id=org.eclipse.rcptt.runner.headless
