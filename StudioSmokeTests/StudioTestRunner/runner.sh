@@ -53,7 +53,7 @@ then
           -htmlReport $htmlReport \
           -junitReport $junitReport \
           -import $project \
-          #-tests test2.test \
+          -tests createAlloyWithoutServices.test \
           #-injection:site http://download.eclipse.org/releases/luna ;org.eclipse.jdt.feature.group; \
           
 

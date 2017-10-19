@@ -1,0 +1,42 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Context-Type: org.eclipse.rcptt.ctx.ecl
+Element-Name: commonProcedures
+Element-Type: context
+Element-Version: 2.0
+Id: _JVbkwK11EeeVGYA6NRhLyQ
+Runtime-Version: 2.1.0.201606221726
+Save-Time: 10/10/17 12:11 PM
+
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
+Content-Type: text/ecl
+Entry-Name: .ecl.context
+
+
+/*
+getSDKFromCLI: Procedure to fecth sdk from appc ti sdk command and split them to each version no.
+*/
+
+proc getSDKFromCLI {
+	
+	list [
+		/*exec-process "/usr/local/bin/node""/usr/local/bin/appc""ti""sdk""-o""json" | get stdout | foreach [val item]  {
+		list [list [list [$item | split -sep "\"installed\": {" -trimResults] | get 1 | split -sep "}" -trimResults] | get 0 | split -sep "\n" -omitEmptyStrings] | each [val sdkItem] [val index]{ //foreach [val sdkItem] {
+				//show-alert $index
+				list [$sdkItem | split -sep ": " -omitEmptyStrings] | get 0 | str
+				
+			}
+		}*/
+		
+		exec-process "/usr/local/bin/node""/usr/local/bin/appc""ti""sdk" | get stdout | foreach [val item]  {
+		list [list [$item | split -sep "Installed SDKs:" -trimResults -omitEmptyStrings] | get 1 | split -sep "\n" -trimResults -omitEmptyStrings] | each [val sdkItem] [val index]{ //foreach [val sdkItem] {
+				//show-alert $index
+				list [$sdkItem | split -sep " " -omitEmptyStrings] | get 0 | str
+			
+			}
+		}
+	]
+		
+	
+} //end of proc
+------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

@@ -6,17 +6,17 @@ Element-Type: context
 Element-Version: 2.0
 Id: _BTbCEKjTEeeBiecpKqw4nA
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 10/4/17 2:39 PM
+Save-Time: 10/19/17 2:25 PM
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee
 Content-Type: text/properties
 Entry-Name: .parameters.context
 
-#Wed Oct 04 14:39:53 SGT 2017
+#Thu Oct 19 14:25:45 SGT 2017
 APPC_USER=
 APPC_CLI=
 APPC_USER_PWD=
-APPC_USER_ORG=
-TI_SDK=
+APPC_USER_ORG=100000089
+TI_SDK=6.2.2.GA
 
 ------=_.parameters.context-2e023de5-3294-36a9-ac1d-6701f05a40ee--

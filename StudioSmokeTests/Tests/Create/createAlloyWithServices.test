@@ -1,0 +1,172 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _76vFIKjdEeeagptQvCTsXg,_77JU0KjdEeeagptQvCTsXg,_770DMKjdEeeagptQvCTsXg,_JVbkwK11EeeVGYA6NRhLyQ
+Element-Name: createAlloyWithServices
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _OvyecGy2EeWk9vMC8Gqn7w
+Runtime-Version: 2.1.0.201606221726
+Save-Time: 10/19/17 5:21 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Client Smoke Test
+Area: Create
+Test: Create Default alloy app using studio
+Steps: 1. Create a default alloy app from studio.
+2. The app should be created successfully without any issues with all services enabled.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+// Create a new Alloy default project=
+get-menu "File/New/Mobile App Project" | click
+with [get-window "New Mobile App Project"] {
+   get-table | select Alloy
+    get-label -after [get-label "Available Templates:"] | click
+    get-button "Next >" | click
+
+	//Check if the list of SDK matches all the SDK available as per appc cli
+    let [val SDKFromCLI [getSDKFromCLI]]{
+
+		with [get-window "New Mobile App Project" | get-group "Project Settings" | get-combo 
+		    -after [get-label "Titanium SDK Version:"]] {
+			repeat [val index] -times [get-property "getItems().length" -raw | int] -command {
+				get-property [concat "getItems().String[" $index "]"] -raw | str | equals [$SDKFromCLI | get $index] | verify-true
+			}
+		}
+	}
+
+    get-editbox -after [get-label "Project name:"] | set-text TestAlloyApp
+    with [get-group "Project Settings"] {
+        get-editbox -after [get-label "App Id:"] | set-text "alloy.appc.smoketests"
+        // Get the Ti SDK value from Global Parameter context
+        get-combo -after [get-label "Titanium SDK Version:"] | select [get-param "$TI_SDK"]
+    }
+  // get-button Finish | click
+}
+with [get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" 
+    | get-button "Enable Appcelerator Platform Services"] {
+    	
+	if [get-property selected -raw | equals false]
+	{
+	 	get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" | get-button "Enable Appcelerator Platform Services" | check
+	}
+}
+
+with [get-window "New Mobile App Project"] {
+	get-button Finish | click
+}
+
+// Wait for enable test service window to pop up and then perform action
+try -times 15 -delay 6000 -command {
+	with [get-window "New Mobile App Project" | get-window Information] {
+	    get-label "Would you like to enable the Appcelerator Test service for this app?" | get-property caption 
+	        | equals "Would you like to enable the Appcelerator Test service for this app?" | verify-true
+	}
+	get-window Information | get-button Yes | click
+	with [get-window "New Mobile App Project" | get-window Information] {
+	    get-editbox -after [get-label "Please provide your password for enabling Test service:"] 
+	        | set-text $APPC_USER_PWD
+	    get-button OK | click
+	}	
+} -catch {
+	log -message "Project Creation failed due to Test Service enablement taking too long" -severity error
+}
+
+// Wait for enable hyperloop window to pop up and then perform action
+try -times 10 -delay 6000 -command {
+	with [get-window "New Mobile App Project" | get-window Information] {
+	    get-label "Would you like to enable native API access with Hyperloop for this app?" | get-property caption 
+	        | equals "Would you like to enable native API access with Hyperloop for this app?" | verify-true
+	}
+	get-window "New Mobile App Project" | get-window Information | get-button Yes | click
+
+} -catch {
+	log -message "Project Creation failed due to Hyperloop Service enablement taking too long" -severity error
+}
+
+wait 10000
+
+// Check complete project created and shown in Project Explorer
+get-view "Project Explorer" | get-tree | get-property "getItemCount()" | equals 1 | verify-true
+with [get-view "Project Explorer" | get-tree] {
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[0].getText()" | equals assets | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[1].getText()" | equals controllers | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[2].getText()" | equals models | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[3].getText()" | equals styles | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[4].getText()" | equals views | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[5].getText()" | equals "alloy.js" | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[6].getText()" | equals "config.json" | verify-true
+    get-item "TestAlloyApp/app" | get-property "getItems().TreeItem[7].getText()" | equals README | verify-true
+    get-item "TestAlloyApp/app" | get-property "getText()" | equals app | verify-true
+}
+
+// Check tabs open by default on project creation
+with [get-tab-folder -index 2] {
+    get-property "pages[0]" | equals "index.xml" | verify-true
+    get-property "pages[1]" | equals "TiApp Editor" | verify-true
+    get-property activePage | equals "TiApp Editor" | verify-true
+}
+// Check correct App Id, Ti SDK, Deployment Target
+with [get-editor "TiApp Editor"] {
+    get-section Application | get-editbox -after [get-label "Application Id:"] | get-property text 
+        | equals "alloy.appc.smoketests" | verify-true
+    get-section "Build Properties" | get-combo -after [get-label "Titanium SDK:"] | get-property selection 
+        | equals [get-param "$TI_SDK"] | verify-true
+    with [get-section "Deployment Targets" | get-control Any -index 2] {
+        get-property "getChildren().Control[1].getText()" | equals Android | verify-true
+        get-property "getChildren().Control[1].getSelection()" | equals true | verify-true
+        get-property "getChildren().Control[3].getText()" | equals iPad | verify-true
+        get-property "getChildren().Control[3].getSelection()" | equals true | verify-true
+        get-property "getChildren().Control[5].getText()" | equals iPhone | verify-true
+        get-property "getChildren().Control[5].getSelection()" | equals true | verify-true
+        }
+    // Check Modules list added in TiApp.xml is complete
+    global [val moduleAdded 0]
+	list "com.soasta.touchtest" "hyperloop" "com.appcelerator.aca" "ti.cloud" | each [val item] {
+		with [get-editor "TiApp Editor" | get-section Modules | get-table] {
+			repeat [val index] -times [get-property itemCount -raw | int] -command{
+				if [get-property [concat "getItems().TableItem[" $index "].getText()"] -raw | equals $item ] -then
+		    	{
+		    		global [val moduleAdded 1] -override
+		    	}
+		    	
+			}
+		}
+	
+		$moduleAdded | eq 1 | assert-true -message [concat "Assert Failed: Module not added for service " $item]
+		global [val moduleAdded 0] -override
+	}
+    
+    
+    with [get-section "Appcelerator Platform Services"] {
+        
+        // Check Appcelerator Platform Services section shows correct organization and all services enabled
+        with [get-control Any -index 2] {
+            get-property "getTabList().Control[0].getChildren().Control[0].getText()" | equals "Organization:" 
+                | verify-true
+            get-property "getTabList().Control[0].getChildren().Control[1].getText()" -raw
+                | matches [concat "^[\d\D\s]*" [get-param "$APPC_USER_ORG"] "[\d\D\s]*$"] | verify-true
+            get-property "getTabList().Control[2].getChildren().Control[0].getText()" 
+                | matches "^Appcelerator services are [partially]* enabled$" | verify-true
+            get-property "getTabList().Control[2].getChildren().Control[0].isVisible()" | equals true | verify-true
+            
+            get-property "getTabList().Control[2].getChildren().Control[2].getChildren().Control[1].getText()" 
+                | equals "Cloud (<a>Show Keys</a>)" | verify-true
+            get-property "getTabList().Control[2].getChildren().Control[2].getChildren().Control[1].isVisible()" 
+                | equals true | verify-true
+            get-property "getTabList().Control[2].getChildren().Control[5].getChildren().Control[1].getText()" 
+                | equals "Analytics (<a>Show Key</a>)" | verify-true
+            get-property "getTabList().Control[2].getChildren().Control[5].getChildren().Control[1].isVisible()" 
+                | equals true | verify-true
+        }
+    }
+}
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
