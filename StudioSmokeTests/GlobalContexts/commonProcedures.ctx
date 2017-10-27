@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: _JVbkwK11EeeVGYA6NRhLyQ
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 10/10/17 12:11 PM
+Save-Time: 10/27/17 4:26 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -16,27 +16,78 @@ Entry-Name: .ecl.context
 /*
 getSDKFromCLI: Procedure to fecth sdk from appc ti sdk command and split them to each version no.
 */
-
 proc getSDKFromCLI {
 	
 	list [
 		/*exec-process "/usr/local/bin/node""/usr/local/bin/appc""ti""sdk""-o""json" | get stdout | foreach [val item]  {
 		list [list [list [$item | split -sep "\"installed\": {" -trimResults] | get 1 | split -sep "}" -trimResults] | get 0 | split -sep "\n" -omitEmptyStrings] | each [val sdkItem] [val index]{ //foreach [val sdkItem] {
-				//show-alert $index
 				list [$sdkItem | split -sep ": " -omitEmptyStrings] | get 0 | str
-				
 			}
-		}*/
-		
+		}*/		
 		exec-process "/usr/local/bin/node""/usr/local/bin/appc""ti""sdk" | get stdout | foreach [val item]  {
 		list [list [$item | split -sep "Installed SDKs:" -trimResults -omitEmptyStrings] | get 1 | split -sep "\n" -trimResults -omitEmptyStrings] | each [val sdkItem] [val index]{ //foreach [val sdkItem] {
-				//show-alert $index
 				list [$sdkItem | split -sep " " -omitEmptyStrings] | get 0 | str
-			
 			}
 		}
-	]
-		
-	
+	]	
 } //end of proc
+
+
+global [val listLength 0]
+global [val tempList 0]
+
+/*
+// Procedure to calculate length of a list and assign it to global val listLength
+*/
+proc calcListLength [val listName]{
+	global [val listLength 0] -override
+	$listName | each [val item][val index]{
+		global [val listLength [$listLength | plus 1]] -override 
+	}
+} //end of proc
+
+/*
+// Procedure to sort a passed list in Ascending order and it is finally available as global val tempList
+*/
+proc sortListAsc [val listName] {
+	calcListLength $listName
+	global [val tempList $listName] -override
+	
+	repeat [val x] -times $listLength -command {		
+		repeat [val y] -times $listLength -command {			
+			global [val tempInternalList [list [	//cannot update local variable in ECL, hence using a temp list to help in sort
+				$tempList | each [val item][val index]{
+					if [$y | gt $x] -then  //this condition is to overcome the limitation of ECL to not allow starting value other than zero in repeat
+					{
+						if [$tempList | get $x | invoke compareTo [$tempList | get $y] | gt 0] -then
+						{
+							if [$index | eq $y] -then
+							{
+								$tempList | get $x | str
+							} -else
+							{
+								if [$index | eq $x] -then
+								{
+									$tempList | get $y | str
+								} -else
+								{
+									$tempList | get $index | str
+								}
+							}
+						} -else
+						{
+							$tempList | get $index | str
+						}
+					} -else
+					{
+						$tempList | get $index | str
+					}
+				} // end of foreach
+			]]] -override
+			
+			global [val tempList $tempInternalList] -override
+				
+		}
+	}
+} // end of proc
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--
