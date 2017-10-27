@@ -1,0 +1,94 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _JVbkwK11EeeVGYA6NRhLyQ
+Element-Name: checkiOSSetup
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _6kPfgLr1EeeNYcmkDjwykQ
+Runtime-Version: 2.1.0.201606221726
+Save-Time: 10/27/17 4:35 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+// Procedure to get Default/selected Xcode from CLI
+proc getSelectedXcodeFromCLI {
+	list [
+		list [
+			list [$iOSInfoFrmCLI | split -sep "\"selectedXcode\": {" -trimResults -omitEmptyStrings] | get 1 
+		| split -sep "\"path\":" -trimResults -omitEmptyStrings] | get 1
+	| split -sep ",\n" -trimResults -omitEmptyStrings] | get 0 | invoke replace "\"" ""
+}
+
+// Procedure to get all the certificates (all types) from CLI
+proc getCertificatesFromCLI {
+	list [
+		list [
+			list [
+				list [$iOSInfoFrmCLI | split -sep "\"certs\": {" -trimResults -omitEmptyStrings] | get 1 
+			| split -sep "\"teams\": [" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"name\":" -trimResults -omitEmptyStrings] | each [val certItem][val index] {
+			if [$index | gt 0]{
+				list [$certItem | split -sep ",\n" -trimResults -omitEmptyStrings] | get 0 | invoke replace "\"" ""
+			}
+		}
+	]
+}
+
+// Procedure to get all the Provisioning Profiles (all types) from CLI
+proc getProfilesFromCLI {
+	list [
+		list [
+			list [
+				list [$iOSInfoFrmCLI | split -sep "\"provisioning\": {" -trimResults -omitEmptyStrings] | get 1 | invoke replaceAll "},\\n\\s*" "}, "
+			| split -sep "}, \"devices\": [" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"name\":" -trimResults -omitEmptyStrings] | each [val provisionItem][val index] {
+			if [$index | gt 0]{
+				list [$provisionItem | split -sep ",\n" -trimResults -omitEmptyStrings] | get 0 | str | invoke replace "\"" ""
+			}
+		}
+	]
+}
+
+
+get-preferences-menu | click
+get-window Preferences | get-tree | select "Studio/Platforms/iOS" | double-click
+
+with [get-window Preferences] {
+	let [val iOSInfoFrmCLI [exec-process "/usr/local/bin/node""/usr/local/bin/appc""ti""info""-t""ios""-o""json" | get stdout]]{
+	
+		// check Xcode path is shown correct and same as in CLI
+	    with [get-group General | get-editbox -after [get-label "iOS SDK Home:"]] {
+	        get-property "getText()" -raw | 
+	        equals [concat [getSelectedXcodeFromCLI] "/Platforms/iPhoneOS.platform/Developer"] 
+			| verify-true
+    	}
+    	
+    	// check iOS certificates shown are same as in CLI
+    	with [get-group Certificates | get-table] {
+	    	global [val certList [getCertificatesFromCLI]]
+	    	sortListAsc $certList // Sort the certificates list in Ascending order
+	    	global [val certList $tempList] -override
+	    	
+	    	repeat [val index] -times [get-property itemCount -raw | int] -command {
+				get-property [concat "getItems().TableItem[" $index "].getText()"] -raw | str | equals [$certList | get $index] | verify-true
+			}
+    	}
+    
+    	// check iOS Provisioning Profiles shown are same as in CLI
+    	with [get-group "Provisioning Profiles" | get-table] {
+	    	global [val profileList [getProfilesFromCLI]]
+	    	sortListAsc $profileList // Sort the Provisioning Profile list in Ascending order
+	    	global [val profileList $tempList] -override
+	    	
+	    	repeat [val index] -times [get-property itemCount -raw | int] -command {
+				get-property [concat "getItems().TableItem[" $index "].getText()"] -raw | str | equals [$profileList | get $index] | verify-true
+			}
+    	}
+    	
+    } // end of Let
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
