@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _OvyecGy2EeWk9vMC8Gqn7w
-Runtime-Version: 2.1.0.201606221726
-Save-Time: 10/19/17 6:12 PM
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 1/24/18, 7:19 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -50,12 +50,12 @@ with [get-window "New Mobile App Project"] {
     }
   // get-button Finish | click
 }
-with [get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" 
-    | get-button "Enable Appcelerator Platform Services"] {
+with [get-window "New Mobile App Project" | get-group "Axway Appcelerator Platform Services" 
+    | get-button "Enable Axway Appcelerator Platform Services"] {
     	
 	if [get-property selected -raw | equals false]
 	{
-	 	get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" | get-button "Enable Appcelerator Platform Services" | check
+	 	get-window "New Mobile App Project" | get-group "Axway Appcelerator Platform Services" | get-button "Enable Axway Appcelerator Platform Services" | check
 	}
 }
 
@@ -151,7 +151,7 @@ with [get-editor "TiApp Editor"] {
 	}
     
     
-    with [get-section "Appcelerator Platform Services"] {
+    with [get-section "Axway Appcelerator Platform Services"] {
         
         // Check Appcelerator Platform Services section shows correct organization and all services enabled
         with [get-control Any -index 2] {
@@ -160,7 +160,7 @@ with [get-editor "TiApp Editor"] {
             get-property "getTabList().Control[0].getChildren().Control[1].getText()" -raw
                 | matches [concat "^[\d\D\s]*" [get-param "$APPC_USER_ORG"] "[\d\D\s]*$"] | verify-true
             get-property "getTabList().Control[2].getChildren().Control[0].getText()" 
-                | matches "^Appcelerator services are [partially]* enabled$" | verify-true
+                | matches "^Axway Appcelerator services are [partially]* enabled$" | verify-true
             get-property "getTabList().Control[2].getChildren().Control[0].isVisible()" | equals true | verify-true
             
             get-property "getTabList().Control[2].getChildren().Control[2].getChildren().Control[1].getText()" 

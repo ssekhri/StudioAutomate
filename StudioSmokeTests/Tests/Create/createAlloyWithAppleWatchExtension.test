@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _835QULVnEee4B903svdkWw
-Runtime-Version: 2.1.0.201606221726
-Save-Time: 10/23/17 11:08 AM
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 1/24/18, 7:47 PM
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
@@ -31,12 +31,12 @@ with [get-window "New Mobile App Project"] {
         get-combo -after [get-label "Titanium SDK Version:"] | select [get-param "$TI_SDK"]
     }
 }
-with [get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" 
-    | get-button "Enable Appcelerator Platform Services"] {
+with [get-window "New Mobile App Project" | get-group "Axway Appcelerator Platform Services" 
+    | get-button "Enable Axway Appcelerator Platform Services"] {
     	
 	if [get-property selected -raw | equals true]
 	{
-	 	get-window "New Mobile App Project" | get-group "Appcelerator Platform Services" | get-button "Enable Appcelerator Platform Services" | uncheck
+	 	get-window "New Mobile App Project" | get-group "Axway Appcelerator Platform Services" | get-button "Enable Axway Appcelerator Platform Services" | uncheck
 	}
 }
 
