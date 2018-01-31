@@ -1,0 +1,125 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _JVbkwK11EeeVGYA6NRhLyQ
+Element-Name: checkAndroidSetup
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _VPnWYAYrEeicWMTM5tS4nQ
+Runtime-Version: 2.2.0.201706152316
+Save-Time: 1/31/18, 11:01 AM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+// Procedure to get selected Android SDK path from CLI
+proc getAndroidSDKFromDaemon {
+	list [
+		list [
+			list [
+				list [$androidInfoFrmDaemon | split -sep "\"sdk\": [" -trimResults -omitEmptyStrings] | get 1
+			| split -sep "\"targets\": {" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"path\":" -trimResults -omitEmptyStrings] | get 1 | invoke replaceAll ",\\n\\s*" ""
+	| split -sep "\"default\":" -trimResults -omitEmptyStrings] | get 0 | invoke replaceAll "\"" ""
+}
+
+// Procedure to get selected Android NDK path from CLI
+proc getAndroidNDKFromDaemon {
+	list [
+		list [
+			list [
+				list [$androidInfoFrmDaemon | split -sep "\"ndk\": [" -trimResults -omitEmptyStrings] | get 1
+			| split -sep "\"sdk\": [" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"path\":" -trimResults -omitEmptyStrings] | get 1 | invoke replaceAll ",\\n\\s*" ""
+	| split -sep "\"name\":" -trimResults -omitEmptyStrings] | get 0 | invoke replaceAll "\"" ""
+}
+
+// Procedure to get list of Android Emulators from CLI
+proc getAndroidEmuFromDaemon {
+	list [
+		list [
+			list [
+				list [$androidInfoFrmDaemon | split -sep "\"emulators\": [" -trimResults -omitEmptyStrings] | get 1
+			| split -sep "\"ndk\": [" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"name\":" -trimResults -omitEmptyStrings] | each [val item][val index] {
+				if [$index | gt 0]{
+					list [$item | split -sep "," -trimResults -omitEmptyStrings] | get 0 | invoke replaceAll "\"" ""
+				}			
+			}
+	]
+}
+
+// Procedure to get Genymotion path from CLI
+proc getGenyPathFromDaemon {
+	list [
+		list [
+			list [
+				list [$GenyInfoFrmDaemon | split -sep "\"home\":" -trimResults -omitEmptyStrings] | get 1
+			| split -sep "\"emulators\": [" -trimResults -omitEmptyStrings] | get 0
+		| split -sep "\"path\":" -trimResults -omitEmptyStrings] | get 1 | invoke replaceAll ",\\n\\s*" ""
+	| split -sep "\"executables\":" -trimResults -omitEmptyStrings] | get 0 | invoke replaceAll "\"" ""
+}
+
+/***
+The below steps to create a bash script and copy output to json file is added as the daemon output was larger than the exec-process buffer size
+***/
+// Create a bash file and save it at workspace location. The bash writes output of daemon exec command to a json file in workpsace.
+str [Concat "/usr/local/bin/node /usr/local/bin/appc appcd exec /android/latest/info >" [get-workspace-location] "/daemonAndroidInfo.json"] | write-lines -uri [Concat [get-workspace-location] "/temp/daemonExecAndroid.sh"]
+// execute the bash file written above.
+exec-process "bash" [Concat [get-workspace-location] "/temp/daemonExecAndroid.sh"] -ignoreExitCode -args [get-workspace-location]
+
+get-preferences-menu | click
+get-window Preferences | get-tree | select "Studio/Platforms/Android" | double-click
+
+with [get-window Preferences] {
+	let [val androidInfoFrmDaemon [read-file [Concat [get-workspace-location] "/daemonAndroidInfo.json"]]]{
+
+		// check Android SDK path is shown correct and same as in CLI
+	    with [get-group General | get-editbox -after [get-label "Android SDK Home:"]] {
+	        get-property "getText()" -raw | equals [getAndroidSDKFromDaemon] | verify-true
+    		}
+    	
+	    	// check Android NDK path shown are same as in CLI
+	    	with [get-group General | get-editbox -after [get-label "Android NDK Home:"]] {
+			 get-property "getText()" -raw | equals [getAndroidNDKFromDaemon] | verify-true
+	    	}
+    
+	    	// check list of Android Emulators shown are correct and are same as in CLI
+	    	with [get-group General | get-combo -after [get-label "Default Emulator:"]] {
+	    		global [val emulatorList [getAndroidEmuFromDaemon]]
+	    		repeat [val index] -times [get-property "getItems().length" -raw| int] -command {
+	    			get-property [concat "getItems().String[" $index "]"] -raw | str | equals [$emulatorList | get $index] | verify-true
+	    		}
+	    	}
+    	
+    } // end of Let
+}
+
+exec-process "rm" "-rf" [Concat [get-workspace-location] "/temp/"] -ignoreExitCode
+exec-process "rm" "-rf" [Concat [get-workspace-location] "/daemonAndroidInfo.json"] -ignoreExitCode
+
+/****
+Test Genymotion Settings
+****/
+// Create a bash file and save it at workspace location. The bash writes output of daemon exec command to a json file in workpsace.
+str [Concat "/usr/local/bin/node /usr/local/bin/appc appcd exec /genymotion/latest/info >" [get-workspace-location] "/daemonGenyInfo.json"] | write-lines -uri [Concat [get-workspace-location] "/temp/daemonExecGeny.sh"]
+// execute the bash file written above.
+exec-process "bash" [Concat [get-workspace-location] "/temp/daemonExecGeny.sh"] -ignoreExitCode -args [get-workspace-location]
+
+with [get-window Preferences] {
+	let [val GenyInfoFrmDaemon [read-file [Concat [get-workspace-location] "/daemonGenyInfo.json"]]]{
+		
+		// check Genymotion path is shown correct and same as in CLI
+	    with [get-group Genymotion | get-editbox -after [get-label "Genymotion path:"]] {
+	        get-property "getText()" -raw | equals [getGenyPathFromDaemon] | verify-true
+    		}
+	
+    } // end of Let
+}
+
+exec-process "rm" "-rf" [Concat [get-workspace-location] "/temp/"] -ignoreExitCode
+exec-process "rm" "-rf" [Concat [get-workspace-location] "/daemonGenyInfo.json"] -ignoreExitCode
+	
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
