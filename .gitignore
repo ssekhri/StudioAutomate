@@ -14,3 +14,4 @@
 .table.*\
 framework.info.*\
 StudioSmokeTests/Studio/TestRunner/eclipse/}
+/.DS_Store
